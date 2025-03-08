@@ -6,9 +6,9 @@ import { Navbar } from "./components/Navbar"
 function App() {
   
   return (
-    <div className="bg-white text-black min-h-screen">
+    <div className="min-h-screen bg-black text-gray-100 transition-opacity duration-700 pt-20">
       <Navbar />
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto px-4 py-6">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
