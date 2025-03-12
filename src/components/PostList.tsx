@@ -8,6 +8,7 @@ export interface Post {
     content: string;
     created_at: string;
     image_url: string;
+    avatar_url: string;
 }
 
 const fetchPosts = async (): Promise<Post[]> => {
@@ -19,7 +20,7 @@ const fetchPosts = async (): Promise<Post[]> => {
 export const PostList = () => {
     const {data, error, isLoading} = useQuery<Post[], Error>({queryKey: ["posts"], queryFn: fetchPosts});
 
-    if(isLoading) <div className="">Loading posts... </div>
+    if(isLoading) { return <div className="">Loading posts... </div>}
     if(error) {
         return <div className="">Error: {error.message}</div>
     }
