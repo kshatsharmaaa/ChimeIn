@@ -5,6 +5,7 @@ import { supabase } from "../supabase-client";
 interface PostInput {
     title: string;
     content: string;
+    
 }
 
 const createPost = async (post: PostInput, imageFile: File) => {
