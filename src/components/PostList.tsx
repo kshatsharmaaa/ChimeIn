@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import { supabase } from "../supabase-client"
 import { PostItem } from "./PostItem";
 
-interface Post {
+export interface Post {
     id: number;
     title: string;
     content: string;
