@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# Chime In
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chime In is a modern social media platform built using **React, Supabase, and TypeScript**. It enables users to connect, engage, and share content seamlessly with real-time features and a responsive UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔑 **Authentication** – Secure login/signup using Supabase Auth.
+- 💬 **Real-time Updates** – Instant updates for posts and interactions.
+- ⚡ **Type-safe Development** – Built with TypeScript for reliability.
+- 🎨 **Responsive UI** – Styled with Tailwind CSS.
+- 🔍 **Search & Explore** – Discover trending posts and users.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Backend:** Supabase (PostgreSQL, Auth, Realtime)
+- **Deployment:** Vercel  (Frontend), Supabase (Backend)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📦 Installation
+
+Clone the repository:
+
+```sh
+git clone https://github.com/kshatsharmaaa/ChimeIn.git
+cd chime-in
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm install  # or yarn install
 ```
+
+Create a `.env` file and add your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your-supabase-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Run the app locally:
+
+```sh
+npm run dev  # or yarn dev
+```
+
+
+
+## 🎯 Roadmap
+
+- [ ] User profiles & avatars
+- [ ] Post reactions & comments
+- [ ] Notifications system
+- [ ] Dark mode
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 📜 License
+
+This project is licensed under the MIT License.
